@@ -1,15 +1,10 @@
 package com.genesistech.njangiapi.security.services;
 
-import com.genesisa6x.echttuneapi.model.RefreshToken;
-import com.genesisa6x.echttuneapi.repo.RefreshTokenRepo;
-import com.genesisa6x.echttuneapi.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service

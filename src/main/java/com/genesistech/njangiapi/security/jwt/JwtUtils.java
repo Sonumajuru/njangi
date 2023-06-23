@@ -1,7 +1,6 @@
 package com.genesistech.njangiapi.security.jwt;
 
-import com.genesisa6x.echttuneapi.security.services.UserDetailsImpl;
-import io.jsonwebtoken.*;
+import com.genesistech.njangiapi.security.services.UserDetailsImpl;
 import lombok.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
