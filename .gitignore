@@ -1,0 +1,30 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+.gradle
+build/
+.navigation
+captures/
+output.json
+/shelf/
+/workspace.xml
+obj/
+.externalNativeBuild
+/build
+/.idea/.name
+/.idea/gradle.xml
+/.idea/jpa-buddy.xml
+/.idea/kotlinc.xml
+/.idea/misc.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
