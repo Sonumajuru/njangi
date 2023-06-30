@@ -1,25 +1,27 @@
 package com.genesistech.njangiapi.security.services;
 
-import jakarta.transaction.Transactional;
+import com.genesistech.njangiapi.model.RefreshToken;
+import com.genesistech.njangiapi.repo.UserRepo;
+import com.genesistech.njangiapi.repo.RefreshTokenRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
 public class RefreshTokenService {
-    @Value("${genesisa6x.echttuneapi.app.jwtRefreshExpirationMs}")
+    @Value("${genesistech.njangiapi.app.jwtRefreshExpirationMs}")
     private Long refreshTokenDurationMs;
     @Autowired
     private RefreshTokenRepo refreshTokenRepo;
     @Autowired
     private UserRepo userRepo;
-
     public RefreshTokenService() {
     }
-
     public Optional<RefreshToken> findByToken(String token) {
         return refreshTokenRepo.findByToken(token);
     }

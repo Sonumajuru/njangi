@@ -14,10 +14,10 @@ import java.util.Date;
 public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
-    @Value("${genesisa6x.echttuneapi.app.jwtSecret}")
+    @Value("${genesistech.njangiapi.app.jwtSecret}")
     private String jwtSecret;
 
-    @Value("${genesisa6x.echttuneapi.app.jwtExpirationMs}")
+    @Value("${genesistech.njangiapi.app.jwtExpirationMs}")
     private int jwtExpirationMs;
 
     /**
