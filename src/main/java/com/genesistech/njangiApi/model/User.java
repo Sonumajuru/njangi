@@ -9,6 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -37,10 +38,10 @@ public class User {
     @Column(name="`Title`")
     private boolean title;
 
-    @Column(name="`Firstname`", nullable = false)
+    @Column(name="`Firstname`")
     private String firstname;
 
-    @Column(name="`Lastname`", nullable = false)
+    @Column(name="`Lastname`")
     private String lastname;
 
     @Column(name="`Password`", nullable = false)
@@ -68,6 +69,13 @@ public class User {
 
     @Column(name="`Subscription`")
     private Subscription subscription;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(	name = "`UserRoles`",
+            joinColumns = @JoinColumn(name = "UserId"),
+            inverseJoinColumns = @JoinColumn(name = "RoleId"))
+    @ToString.Exclude
+    private Set<Role> roles;
     @PrePersist
     public void autoFill(){
         this.setUserUuid(UUID.randomUUID().toString());
