@@ -19,6 +19,7 @@ obj/
 /.idea/misc.xml
 /.idea/vcs.xml
 /.idea/workspace.xml
+/njangiapi/target
 
 ### STS ###
 .apt_generated
